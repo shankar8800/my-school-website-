@@ -1,0 +1,162 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 100px; /* Adjust based on your logo size */
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.banner {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.school-photo {
+    width: 100%; /* Adjust size as needed */
+    max-height: 300px;
+    object-fit: cover;
+}
+
+#founder {
+    text-align: center;
+    padding: 20px;
+}
+
+.founder-photo {
+    width: 150px; /* Adjust size as needed */
+    border-radius: 50%; /* Circular photo */
+}
+
+.class-notes {
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 5px;
+    font-size: 12px;
+}
+
+.search-bar button {
+    padding: 5px 10px;
+    font-size: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #1d201e;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50px;
+}
+
+#mediaContainer {
+    display: none;
+    margin-top: 20px;
+}
+
+#outputContainer img, 
+#outputContainer video {
+    max-width: 300px;
+    margin-top: 10px;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+}
+
+.otp-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+h2, h3 {
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.social-login {
+    text-align: center;
+}
+
+.gmail-button {
+    background-color: #db4437;
+}
+
+.facebook-button {
+    background-color: #3b5998;
+}

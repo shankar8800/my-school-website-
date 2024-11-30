@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margdarshan Public School - CBSE Notes</title>
+    <link rel="stylesheet" href="styles.cssss"> <!-- CSS file for styling -->
+    <link rel="stylesheet" href="script.js">
+    
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="jjjj.jpeg" alt="Margdarshan Public School Logo" />
+            <h1>Margdershan Public School</h1>
+            
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#subjects">Subjects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#Login">Login</a></li>
+                <li><a href="#about">About Us</a></li>
+                               
+                
+          
+                    </div>
+                </div>
+                <script>alert( welcome)</script>
+            </div>
+            
+            
+        </nav>
+        <!-- Search Bar -->
+        <form class="search-bar" action="/search" method="GET">
+            <input type="text" placeholder="Search notes..." name="query" required>
+            <button type="submit">Search</button>
+        </form>
+    </header>
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dynamic Admission Test Form</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 20px;
+                background-color: #f4f4f4;
+            }
+            form {
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                max-width: 600px;
+                margin: auto;
+            }
+            h2 {
+                text-align: center;
+            }
+            label {
+                display: block;
+                margin: 10px 0 5px;
+            }
+            input[type="text"], input[type="number"], select {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 15px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+            input[type="submit"], .close-btn {
+                background-color: #4CAF50;
+                color: white;
+                padding: 10px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                margin-right: 5px;
+            }
+            input[type="submit"]:hover, .close-btn:hover {
+                background-color: #45a049;
+            }
+            .questions {
+                display: none;
+                margin-top: 20px;
+            }
+            .close-btn {
+                background-color: #f44336; /* Red */
+            }
+            .close-btn:hover {
+                background-color: #e53935; /* Darker red */
+            }
+        </style>
+    </head>
+    <body>
+    
+    <h2>Dynamic Admission Test Form</h2>
+    <form id="admissionForm">
+        <label for="name">Student Name:</label>
+        <input type="text" id="name" name="name" required>
+    
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+    
+        <label for="grade">Grade Applying For:</label>
+        <select id="grade" name="grade" required>
+            <option value="">Select</option>
+            <option value="1">Grade 1</option>
+            <option value="2">Grade 2</option>
+            <option value="3">Grade 3</option>
+            <option value="4">Grade 4</option>
+            <option value="5">Grade 5</option>
+            <option value="6">Grade 6</option>
+            <option value="7">Grade 7</option>
+            <option value="8">Grade 8</option>
+            <option value="9">Grade 9</option>
+            <option value="10">Grade 10</option>
+        </select>
+    
+        <div id="questions" class="questions"></div>
+    
+        <input type="submit" value="Submit">
+        <button type="button" class="close-btn" id="closeButton">Close</button>
+    </form>
+    
+    <p id="successMessage" style="color: green; text-align: center; display: none;">Form submitted successfully!</p>
+    
+    <script>
+        const questionsData = {
+            1: [
+                { question: "What is 1 + 1?", answer: "" },
+                { question: "Name a fruit that is red.", answer: "" },
+                { question: "What is 2 - 1?", answer: "" },
+                { question: "How many days are in a week?", answer: "" },
+                { question: "What color is the sky?", answer: "" }
+            ],
+            2: [
+                { question: "What is 2 + 2?", answer: "" },
+                { question: "What is 3 x 3?", answer: "" },
+                { question: "What is the capital of India?", answer: "" },
+                { question: "What is 5 - 3?", answer: "" },
+                { question: "How many months are in a year?", answer: "" }
+            ],
+            3: [
+                { question: "What is 5 + 5?", answer: "" },
+                { question: "What is the largest continent?", answer: "" },
+                { question: "What is 6 x 7?", answer: "" },
+                { question: "What is the capital of France?", answer: "" },
+                { question: "What is the boiling point of water?", answer: "" }
+            ],
+            4: [
+                { question: "What is the square root of 16?", answer: "" },
+                { question: "Who wrote 'Romeo and Juliet'?", answer: "" },
+                { question: "What is 8 x 8?", answer: "" },
+                { question: "What is the capital of Japan?", answer: "" },
+                { question: "Name the largest ocean.", answer: "" }
+            ],
+            5: [
+                { question: "What is 25 + 25?", answer: "" },
+                { question: "What is the capital of the USA?", answer: "" },
+                { question: "What is 15 - 5?", answer: "" },
+                { question: "What are the planets in our solar system?", answer: "" },
+                { question: "What is the largest mammal?", answer: "" }
+            ],
+            6: [
+                { question: "What is the Pythagorean theorem?", answer: "" },
+                { question: "What is the capital of Egypt?", answer: "" },
+                { question: "What is 7 x 9?", answer: "" },
+                { question: "What are the main parts of a cell?", answer: "" },
+                { question: "What is a renewable resource?", answer: "" }
+            ],
+            7: [
+                { question: "What is Newton's first law?", answer: "" },
+                { question: "What is the capital of Russia?", answer: "" },
+                { question: "What is 12 x 12?", answer: "" },
+                { question: "What are the layers of the Earth?", answer: "" },
+                { question: "What is an ecosystem?", answer: "" }
+            ],
+            8: [
+                { question: "What is the law of supply and demand?", answer: "" },
+                { question: "What is the capital of Germany?", answer: "" },
+                { question: "What is 9 x 8?", answer: "" },
+                { question: "What is a democracy?", answer: "" },
+                { question: "What is globalization?", answer: "" }
+            ],
+            9: [
+                { question: "What is the theory of evolution?", answer: "" },
+                { question: "What is the capital of China?", answer: "" },
+                { question: "What is 15 x 15?", answer: "" },
+                { question: "What is a natural resource?", answer: "" },
+                { question: "What is the importance of biodiversity?", answer: "" }
+            ],
+            10: [
+                { question: "What is the scientific method?", answer: "" },
+                { question: "What is the capital of Brazil?", answer: "" },
+                { question: "What is 20 x 20?", answer: "" },
+                { question: "What are the effects of climate change?", answer: "" },
+                { question: "What is the role of government?", answer: "" }
+            ]
+        };
+    
+        document.getElementById("grade").addEventListener("change", function() {
+            const grade = this.value;
+            const questionsDiv = document.getElementById("questions");
+            questionsDiv.innerHTML = '';
+    
+            if (grade) {
+                questionsData[grade].forEach((q, index) => {
+                    const label = document.createElement('label');
+                    label.innerText = q.question;
+                    const input = document.createElement('input');
+                    input.type = 'text';
+                    input.name = `question${index + 1}`;
+                    questionsDiv.appendChild(label);
+                    questionsDiv.appendChild(input);
+                });
+                questionsDiv.style.display = 'block';
+            } else {
+                questionsDiv.style.display = 'none';
+            }
+        });
+    
+        document.getElementById("admissionForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            document.getElementById("successMessage").style.display = 'block';
+            this.reset();
+            document.getElementById("questions").style.display = 'none';
+        });
+    
+        document.getElementById("closeButton").addEventListener("click", function() {
+            // Close the form or redirect as needed
+            const form = document.getElementById("admissionForm");
+            form.style.display = 'none'; // Hide the form
+        });
+    </script>
+    
+    
+    </body>
+    </html>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Student Search</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                padding: 20px;
+            }
+            #search-section {
+                margin-bottom: 20px;
+            }
+            #search-bar {
+                padding: 8px;
+                width: 200px;
+            }
+            #search-button {
+                padding: 8px 12px;
+                margin-left: 10px;
+                cursor: pointer;
+            }
+            #result {
+                margin-top: 20px;
+                font-weight: bold;
+            }
+            .student-info {
+                margin-top: 20px;
+            }
+            .student-info img {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+            }
+            .student-info p {
+                margin: 5px 0;
+            }
+        </style>
+    </head>
+    <body>
+    
+        <div id="search-section">
+            <label for="search-bar">Enter Student Name:</label>
+            <input type="text" id="search-bar" placeholder="Search by name...">
+            <button id="search-button">Search</button>
+        </div>
+    
+        <div id="result"></div>
+    
+        <script>
+            // Sample data (student info)
+            const students = [
+                {
+                    name: "khushi",
+                    rollNumber: "juse wala ",
+                   
+                    class: "9th",
+                    gender: "girl",
+                    photo: "shankar jpg"
+                },
+                {
+                    name: "mehak",
+                    rollNumber: "!",
+                   
+                    class: "9th",
+                    gender: "girl",
+                    photo: "shankar jpg"
+                },
+                {
+                    name: "Shiva 1",
+                    rollNumber: "4",
+                   
+                    class: "10th",
+                    gender: "Boy",
+                    photo: "shankar jpg"
+                },
+                {
+                    name: "pritam",
+                    rollNumber: "4",
+                   
+                    class: "10th",
+                    gender: "Boy",
+                    photo: "shankar jpg"
+                },
+                {
+                    name: "tanuj",
+                    rollNumber: "4",
+                   
+                    class: "10th",
+                    gender: "Boy",
+                    photo: "shankar jpg"
+                },
+                {
+                    name: "anameka",
+                    rollNumber: "4",
+                   
+                    class: "8th",
+                    gender: "girl",
+                    photo: "shankar jpg"
+                },
+                {
+                    name: "aditya",
+                    rollNumber: "16",
+                   
+                    class: "4th",
+                    gender: "boy",
+                    photo: "shankar jpg"
+                },
+                {
+                    name: "pallak",
+                    rollNumber: "4",
+                   
+                    class: "8th",
+                    gender: "girl",
+                    photo: "shankar jpg"
+                },
+                {
+                    name: "shourav",
+                    rollNumber: "4",
+                   
+                    class: "9th",
+                    gender: "Boy",
+                    photo: "shankar jpg"
+                },
+                {
+                    name: "radhika",
+                    rollNumber: "4",
+                   
+                    class: "8th",
+                    gender: "girl",
+                    photo: "shankar jpg"
+                },
+                {
+                    name: "veppin",
+                    rollNumber: "4",
+                   
+                    class: "8th",
+                    gender: "Boy",
+                    photo: "shankar jpg"
+                },
+                {
+                    name: "",
+                    rollNumber: "4",
+                   
+                    class: "10th",
+                    gender: "Boy",
+                    photo: "shankar jpg"
+                },
+                {
+                    name: "Shankar",
+                    rollNumber: "4",
+                   
+                    class: "9th",
+                    gender: "Boy",
+                    photo: "shankar jpg"
+                },
+                {
+                    name: "",
+                    rollNumber: "4",
+                   
+                    class: "10th",
+                    gender: "Boy",
+                    photo: "shankar jpg"
+                },
+                {
+                    name: "annu",
+                    rollNumber: "4",
+                   
+                    class: "9th",
+                    gender: "Boy",
+                    photo: "shankar jpg"
+                },
+                {
+                    name: "tannu",
+                    rollNumber: "4",
+                   
+                    class: "9th",
+                    gender: "Boy",
+                    photo: "shankar jpg"
+                },
+                {
+                    name: " ",
+                    rollNumber: "4",
+                   
+                    class: "9th",
+                    gender: "girl",
+                    photo: "shankar jpg"
+                },
+                {
+                    name: "aman",
+                    rollNumber: "4",
+                   
+                    class: "10th",
+                    gender: "Boy",
+                    photo: "shankar jpg"
+                },
+                {
+                    name: "ritek",
+                    rollNumber: "4",
+                   
+                    class: "10th",
+                    gender: "Boy",
+                    photo: "shankar jpg"
+                },
+                {
+                    name: "Sr",
+                    rollNumber: "4",
+
+                    class: "10th",
+                    gender: "Boy",
+                    photo: "shankar jpg"
+                },
+                {
+                    name: "",
+                    rollNumber: "4",
+                   
+                    class: "10th",
+                    gender: "Boy",
+                    photo: "shankar jpg"
+                },
+                {
+                    name: " mall deepali",
+                    rollNumber: "4",
+                   
+                    class: "11sth",
+                    love: "vikash",
+                    photo: "shankar jpg"
+                },
+                {
+                    name: "dev",
+                    rollNumber: "4",
+                   
+                    class: "8th",
+                    gender: "Boy",
+                    photo: "shankar jpg"
+                },
+                {
+                    name: "",
+                    rollNumber: "4",
+                   
+                    class: "10th",
+                    gender: "Boy",
+                    photo: "shankar jpg"
+                },
+                {
+                    name: "",
+                    rollNumber: "4",
+                   
+                    class: "10th",
+                    gender: "Boy",
+                    photo: "shankar jpg"
+                },
+                {
+                    name: "deva",
+                    rollNumber: "1",
+                    father:"shankar",
+                    class: "9th",
+                    gender: "boy",
+                    photo: "https://via.placeholder.com/150/FF00FF/808080?Text=Priya"
+                },
+                {
+                    name: "vikash",
+                    rollNumber: "103",
+                    
+                    class: "9th",
+                    gender: "Boy",
+                    photo: "https://via.placeholder.com/150/FF5733/808080?Text=Ravi"
+                },
+                {
+                    name: "shiva",
+                    rollNumber: "104",
+                    
+                    class: "11th",
+                    gender: "Girl",
+                    photo: "https://via.placeholder.com/150/FFFF00/808080?Text=Ayesha"
+                }
+            ];
+    
+            // Function to search student
+            document.getElementById('search-button').addEventListener('click', function() {
+                let searchName = document.getElementById('search-bar').value.trim().toLowerCase();
+                let resultDiv = document.getElementById('result');
+    
+                // Search logic
+                let student = students.find(s => s.name.toLowerCase() === searchName);
+                
+                if (student) {
+                    resultDiv.innerHTML = `
+                        <div class="student-info">
+                            <img src="${student.photo}" alt="${student.name} Photo">
+                            <p><strong>Student Name:</strong> ${student.name}</p>
+                            <p><strong>Roll Number:</strong> ${student.rollNumber}</p>
+                            <p><strong>Mother's Name:</strong> ${student.motherName}</p>
+                            <p><strong>Class:</strong> ${student.class}</p>
+                            <p><strong>Gender:</strong> ${student.gender}</p>
+                        </div>
+                    `;
+                } else {
+                    resultDiv.innerHTML = '<p>No student found with that name.</p>';
+                }
+            });
+        </script>
+    
+    </body>
+    </html>
+    
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>School Admission Form</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                padding: 20px;
+            }
+            .form-container {
+                display: none; /* Initially hide the form */
+                background: white;
+                padding: 20px;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                margin-top: 20px;
+            }
+            input, select, textarea {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+            button {
+                background-color: #253025;
+                color: white;
+                padding: 10px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                margin-right: 10px;
+            }
+            button:hover {
+                background-color: #45a049;
+            }
+        </style>
+    </head>
+    <body>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Activity Gallery</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    background-color: #f4f4f4;
+                    padding: 20px;
+                    text-align: center;
+                }
+                .open-gallery-btn {
+                    background-color: #df1818;
+                    color: white;
+                    padding: 15px 25px;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    font-size: 18px;
+                }
+                .gallery {
+                    display: none; /* Initially hide the gallery */
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0, 0, 0, 0.8);
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                }
+                .gallery img {
+                    max-width: 80%;
+                    max-height: 80%;
+                    border-radius: 5px;
+                    margin-bottom: 20px;
+                }
+                .close-btn {
+                    background-color: red;
+                    color: white;
+                    border: none;
+                    padding: 10px 15px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+            </style>
+        </head>
+        <body>
+        
+        <h2>Activity Gallery</h2>
+        <button class="open-gallery-btn" id="openGalleryBtn">Open Gallery</button>
+        
+        <div class="gallery" id="gallery">
+            <img id="galleryImage" src="" alt="Gallery Image">
+            <button class="close-btn" id="closeGalleryBtn">Close</button>
+        </div>
+        
+        <script>
+            const openGalleryBtn = document.getElementById('openGalleryBtn');
+            const gallery = document.getElementById('gallery');
+            const galleryImage = document.getElementById('galleryImage');
+            const closeGalleryBtn = document.getElementById('closeGalleryBtn');
+        
+            const images = [
+                "", // Replace with your image filenames
+                "img2.jpg",
+                "img3.jpg",
+                "img4.jpg",
+                "img5.jpg",
+                "img6.jpg",
+                "img2.jpg",
+                "img3.jpg",
+                "img4.jpg",
+                "img5.jpg",
+                "img6.jpg",
+                "img2.jpg",
+                "img3.jpg",
+                "img4.jpg",
+                "img5.jpg",
+                
+            ];
+        
+            let currentIndex = 0;
+        
+            openGalleryBtn.addEventListener('click', function() {
+                currentIndex = 0; // Reset to the first image
+                showImage(currentIndex);
+                gallery.style.display = 'flex';
+            });
+        
+            function showImage(index) {
+                galleryImage.src = images[index];
+            }
+        
+            galleryImage.addEventListener('click', function() {
+                currentIndex = (currentIndex + 1) % images.length; // Cycle through images
+                showImage(currentIndex);
+            });
+        
+            closeGalleryBtn.addEventListener('click', function() {
+                gallery.style.display = 'none';
+            })
+        </script>
+        
+        </body>
+        </html>
+        
+        
+    
+    <h2>click</h2>
+    <button id="openFormBtn">Open Admission Form</button>
+    <button id="closeFormBtn" style="display: none;">Close Admission Form</button>
+    
+    <div class="form-container" id="admissionFormContainer">
+        <form id="admissionForm">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+    
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+    
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+    
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="4" required></textarea>
+    
+            <label for="contactNumber">Contact Number:</label>
+            <input type="tel" id="contactNumber" name="contactNumber" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="grade">Grade Applying For:</label>
+            <select id="grade" name="grade" required>
+                <option value="1">1st Grade</option>
+                <option value="2">2nd Grade</option>
+                <option value="3">3rd Grade</option>
+                <option value="4">4th Grade</option>
+                <option value="5">5th Grade</option>
+                <option value="6">6th Grade</option>
+                <option value="7">7th Grade</option>
+                <option value="8">8th Grade</option>
+                <option value="9">9th Grade</option>
+                <option value="10">10th Grade</option>
+                <option value="11">11th Grade</option>
+                <option value="12">12th Grade</option>
+            </select>
+    
+            <label for="previousSchool">Previous School (if any):</label>
+            <input type="text" id="previousSchool" name="previousSchool">
+    
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    
+    <script>
+        const openFormBtn = document.getElementById('openFormBtn');
+        const closeFormBtn = document.getElementById('closeFormBtn');
+        const admissionFormContainer = document.getElementById('admissionFormContainer');
+    
+        openFormBtn.addEventListener('click', function() {
+            admissionFormContainer.style.display = 'block';
+            openFormBtn.style.display = 'none';
+            closeFormBtn.style.display = 'inline';
+        });
+    
+        closeFormBtn.addEventListener('click', function() {
+            admissionFormContainer.style.display = 'none';
+            openFormBtn.style.display = 'inline';
+            closeFormBtn.style.display = 'none';
+        });
+    
+        document.getElementById('admissionForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Admission form submitted successfully!');
+            closeFormBtn.click(); // Close the form after submission
+        });
+    </script>
+    
+    </body>
+    </html>
+    
+    
+    
+        </style>
+    </head>
+    <body>
+  
+</script>
+
+</body>
+</html>
+
+    
+    <button id="toggleFormBtn">Show/Hide Contact Form</button>
+    
+    <div id="contactForm">
+        <form action="submit_form.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+    
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+    
+            <label for="email">Email (Gmail):</label>
+            <input type="email" id="email" name="email" required placeholder="example@gmail.com"><br><br>
+    
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+    
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    
+    <script>
+        document.getElementById('toggleFormBtn').onclick = function() {
+            const form = document.getElementById('contactForm');
+            form.style.display = (form.style.display === 'block') ? 'none' : 'block'; // Toggle visibility
+        };
+    </script>
+    
+    </body>
+    </html>
+    
+    </div>
+    <!-- Main Banner -->
+    <section class="banner">
+        <h1>Welcome to Margdershan Public School</h1>
+        <p>Your resource for comprehensive CBSE notes!</p>
+        <img src="premium_photo-1683309567810-4d232ee83d2f.jpeg" alt="Margdarshan Public School" class="school-photo" />
+    </section>
+
+    <!-- Founder Section -->
+    <section id="founder">
+        <h2> Mr.ShashiKumar: our school principal</h2>
+        <img src="mr....png" alt="Mr. Shankar" class="founder-photo" />
+        <p>The principal is the head of the school, responsible for overseeing all academic and administrative functions. They play a crucial role in creating a positive learning environment, guiding teachers, and supporting students. A principal also acts as a liaison between the school and the community, promoting collaboration and engagement. Their leadership inspires both students and staff to achieve excellence in education.</p>
+    </section>
+
+    
+    <h2 onclick="toggleTeachers()">details : teachers</h2>
+    <div id="teachers">
+        <div class="teacher">
+            <img src="wice-principal.jpg" alt="wice Principal">
+            <p>Mrs. Mamta Mam</p>
+        </div>
+        <div class="teacher">
+            <img src="img1.jpg.jpg" alt="Mr. Aadarsh Gupta">
+            <p>Mr. Aadarsh Gupta</p>
+        </div>
+        <div class="teacher">
+            <img src="vinita.jpg" alt="Mrs. Vinita Mam">
+            <p>Mrs. Vinita Mam</p>
+        </div>
+        <div class="teacher">
+            <img src="saumya.jpg" alt="Mrs. Saumya Mam">
+            <p>Mrs. Saumya Mam</p>
+        </div>
+        <div class="teacher">
+            <img src="anjali.jpg" alt="Mrs. Anjali Mam">
+            <p>Mrs. Anjali Mam</p>
+        </div>
+        <div class="teacher">
+            <img src="anjali.jpg" alt="Mrs. Anjali Mam">
+            <p>Mrs. Anjali Mam</p>
+        </div>
+        <div class="teacher">
+            <img src="gulabsa.jpg" alt="Mrs. Gulabsa Mam">
+            <p>Mrs. Gulabsa Mam</p>
+        </div>
+        <div class="teacher">
+            <img src="gulabsa.jpg" alt="Mrs. Gulabsa Mam">
+            <p>Mrs. Gulabsa Mam</p>
+        </div>
+        <div class="teacher">
+            <img src="gulabsa.jpg" alt="Mrs. Gulabsa Mam">
+            <p>Mrs. Gulabsa Mam</p>
+        </div>
+    </div>
+
+
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Media Selector</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+    
+       
+    
+    </body>
+    </html>
+    
+
+
+        
+       
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>CBSE Class 8 Subjects</title>
+                <style>
+                    body {
+                        font-family: Arial, sans-serif;
+                        margin: 20px;
+                    }
+                    .subject {
+                        margin: 10px 0;
+                        padding: 10px;
+                        border: 1px solid #ccc;
+                        border-radius: 5px;
+                    }
+                    .details {
+                        display: none;
+                        margin-top: 10px;
+                        padding: 5px;
+                        background-color: #f9f9f9;
+                        border: 1px solid #ddd;
+                    }
+                    .toggle-button {
+                        cursor: pointer;
+                        color: blue;
+                        text-decoration: underline;
+                    }
+                </style>
+            </head>
+            <body>
+                <h1>CBSE Class 8 Subjects</h1>
+                
+                <div class="subject">
+                    <h2>Hindi</h2>
+                    <span class="toggle-button">View Details</span>
+                    <div class="details">
+                        <p>Hindi includes prose, poetry, grammar, and writing skills.</p>
+                        <a href="Document 99.pdf" download>Download Hindi Notes</a>
+                    </div>
+                </div>
+            
+                <div class="subject">
+                    <h2>English</h2>
+                    <span class="toggle-button">View Details</span>
+                    <div class="details">
+                        <p>English includes prose, poetry, grammar, and writing tasks.</p>
+                        <a href="path/to/english_notes.pdf" download>Download English Notes</a>
+                    </div>
+                </div>
+            
+                <div class="subject">
+                    <h2>Mathematics</h2>
+                    <span class="toggle-button">View Details</span>
+                    <div class="details">
+                        <p>Mathematics covers algebra, geometry, statistics, and more.</p>
+                        <a href="path/to/mathematics_notes.pdf" download>Download Mathematics Notes</a>
+                    </div>
+                </div>
+            
+                <div class="subject">
+                    <h2>Science</h2>
+                    <span class="toggle-button">View Details</span>
+                    <div class="details">
+                        <p>Science includes physics, chemistry, and biology topics.</p>
+                        <a href="path/to/science_notes.pdf" download>Download Science Notes</a>
+                    </div>
+                </div>
+            
+                <div class="subject">
+                    <h2>Social Science</h2>
+                    <span class="toggle-button">View Details</span>
+                    <div class="details">
+                        <p>Social Science covers history, geography, political science, and economics.</p>
+                        <a href="path/to/social_science_notes.pdf" download>Download Social Science Notes</a>
+                    </div>
+                </div>
+            
+                <script>
+                    const toggleButtons = document.querySelectorAll('.toggle-button');
+                    toggleButtons.forEach(button => {
+                        button.addEventListener('click', () => {
+                            const details = button.nextElementSibling;
+                            details.style.display = details.style.display === 'none' || details.style.display === '' ? 'block' : 'none';
+                            button.textContent = button.textContent.includes('View') ? 'Hide' : 'View Details';
+                        });
+                    });
+                </script>
+            </body>
+            </html>
+            
+        </div>
+        
+
+
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Class 9 Subjects</title>
+    <style>
+        body { font-family: Arial; }
+        .details { display: none; }
+        .toggle { color: blue; cursor: pointer; }
+    </style>
+</head>
+<body>
+       </script>
+</body>
+</html>
+
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBSE Class 9 Subjects</title>
+    <style>
+        body { font-family: Arial; margin: 20px; }
+        .subject { margin: 10px 0; padding: 10px; border: 1px solid #ccc; }
+        .details { display: none; }
+        .toggle { cursor: pointer; color: blue; text-decoration: underline; }
+    </style>
+    
+</head>
+<body>
+    
+
+
+    
+   
+
+
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    </script>
+</body>
+</html>
+
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBSE Class 10 Subjects</title>
+    <style>
+        body { font-family: Arial; margin: 20px; }
+        .subject { margin: 10px 0; padding: 10px; border: 1px solid #ccc; }
+        .details { display: none; }
+        .toggle { cursor: pointer; color: blue; text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>CBSE Class 9 Subjects</h1>
+
+    <div class="subject">
+        <h2>Hindi</h2>
+        <span class="toggle">View Details</span>
+        <div class="details">
+            <p>Literature, poetry, grammar.</p>
+            <a href="path/to/hindi_notes.pdf" download>Download Notes</a>
+        </div>
+    </div>
+
+    <div class="subject">
+        <h2>English</h2>
+        <span class="toggle">View Details</span>
+        <div class="details">
+            <p>Prose, poetry, grammar.</p>
+            <a href="path/to/english_notes.pdf" download>Download Notes</a>
+        </div>
+    </div>
+
+    <div class="subject">
+        <h2>Mathematics</h2>
+        <span class="toggle">View Details</span>
+        <div class="details">
+            <p>Algebra, geometry, statistics.</p>
+            <a href="path/to/mathematics_notes.pdf" download>Download Notes</a>
+        </div>
+    </div>
+
+    <div class="subject">
+        <h2>Science</h2>
+        <span class="toggle">View Details</span>
+        <div class="details">
+            <p>Physics, chemistry, biology.</p>
+            <a href="path/to/science_notes.pdf" download>Download Notes</a>
+        </div>
+    </div>
+
+    <div class="subject">
+        <h2>Social Science</h2>
+        <span class="toggle">View Details</span>
+        <div class="details">
+            <p>History, geography, political science.</p>
+            <a href="path/to/social_science_notes.pdf" download>Download Notes</a>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const details = button.nextElementSibling;
+                details.style.display = details.style.display === 'block' ? 'none' : 'block';
+                button.textContent = button.textContent.includes('View') ? 'Hide Details' : 'View Details';
+            });
+        });
+    </script>
+</body>
+</html>
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBSE Class 10 Subjects</title>
+    <style>
+        body { font-family: Arial; margin: 20px; }
+        .subject { margin: 10px 0; padding: 10px; border: 1px solid #ccc; }
+        .details { display: none; }
+        .toggle { cursor: pointer; color: blue; text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>CBSE Class 10 Subjects</h1>
+
+    <div class="subject">
+        <h2>Hindi</h2>
+        <span class="toggle">View Details</span>
+        <div class="details">
+            <p>Literature, poetry, grammar.</p>
+            <a href="path/to/hindi_notes.pdf" download>Download Notes</a>
+        </div>
+    </div>
+
+    <div class="subject">
+        <h2>English</h2>
+        <span class="toggle">View Details</span>
+        <div class="details">
+            <p>Prose, poetry, grammar.</p>
+            <a href="path/to/english_notes.pdf" download>Download Notes</a>
+        </div>
+    </div>
+
+    <div class="subject">
+        <h2>Mathematics</h2>
+        <span class="toggle">View Details</span>
+        <div class="details">
+            <p>Algebra, geometry, statistics.</p>
+            <a href="path/to/mathematics_notes.pdf" download>Download Notes</a>
+        </div>
+    </div>
+
+    <div class="subject">
+        <h2>Science</h2>
+        <span class="toggle">View Details</span>
+        <div class="details">
+            <p>Physics, chemistry, biology.</p>
+            <a href="path/to/science_notes.pdf" download>Download Notes</a>
+        </div>
+    </div>
+
+    <div class="subject">
+        <h2>Social Science</h2>
+        <span class="toggle">View Details</span>
+        <div class="details">
+            <p>History, geography, political science.</p>
+            <a href="path/to/social_science_notes.pdf" download>Download Notes</a>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const details = button.nextElementSibling;
+                details.style.display = details.style.display === 'block' ? 'none' : 'block';
+                button.textContent = button.textContent.includes('View') ? 'Hide Details' : 'View Details';
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+        
+
+</head>
+<body>
+ 
+
+    <script>
+        document.getElementById('toggleFormButton').addEventListener('click', function() {
+            const form = document.getElementById('contactForm');
+            if (form.style.display === 'none' || form.style.display === '') {
+                form.style.display = 'block';
+            } else {
+                form.style.display = 'none';
+            }
+        });
+
+    </script>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Teachers</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+                background-color: #f4f4f4;
+            }
+            h2 {
+                color: #333;
+                cursor: pointer;
+            }
+            #teachers {
+                display: none; /* Initially hidden */
+                margin-top: 20px;
+                padding: 10px;
+                background-color: #fff;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+            .teacher {
+                margin: 10px;
+                text-align: center;
+                display: inline-block;
+            }
+            .teacher img {
+                width: 100px; /* Adjust size as needed */
+                height: 100px; /* Adjust size as needed */
+                border-radius: 50%; /* Circular photo */
+            }
+        </style>
+        <script>
+            function toggleTeachers() {
+                const teachers = document.getElementById('teachers');
+                teachers.style.display = teachers.style.display === 'none' ? 'block' : 'none';
+            }
+        </script>
+        
+        
+    <!-- Founder Section -->
+    <section id="founder">
+        <h2> founder by : Mr.Shankar kumar</h2>
+        <img src="shankar jpg.jpg" alt="Mr. Shankar" class="founder-photo" />
+        <p>My name is Shankar, and I am a dedicated student committed to learning and achieving my goals.            </p>
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Links</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 50px;
+        }
+        .link {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .link:hover {
+            transform: scale(1.05);
+        }
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Follow Us!</h1>
+    <div class="link">
+        <a href="https://www.instagram.com/thefitnessmedia_11/profilecard/?igsh=dXA4c245a3o4emdr" target="_blank">Instagram</a>
+    </div>
+    <div class="link">
+        <a href="https://www.youtube.com/yourchannel" target="_blank">YouTube</a>
+    </div>
+    <div class="link">
+        <a href="https://www.facebook.com/yourprofile" target="_blank">Facebook</a>
+    </div>
+</ul>
+<div class="login-container">
+    <div class="otp-box">
+        <h2>OTP Login</h2>
+        <input type="text" placeholder="Enter your phone number" maxlength="10">
+        <button>Get OTP</button>
+        
+        <input type="text" placeholder="Enter OTP" maxlength="6">
+        <button>Submit OTP</button>
+        
+        <div class="social-login">
+            <h3>Or login with</h3>
+            <button class="gmail-button">Login with Gmail</button>
+            <button class="facebook-button">Login with Facebook</button>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Support</title>
+    <style>
+        #chatBox {
+            display: none;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        function toggleChat() {
+            const chatBox = document.getElementById('chatBox');
+            chatBox.style.display = chatBox.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function callSupport() {
+            window.location.href = 'tel:8800432559';
+        }
+    </script>
+</head>
+<body>
+    <h1>Customer Support</h1>
+    <button onclick="callSupport()">Call Customer Care: 8800432559</button>
+    <button onclick="toggleChat()">Chat with Customer Support</button>
+
+    <div id="chatBox">
+        <h2>Chat Box</h2>
+        <textarea rows="4" cols="30" placeholder="Type your message..."></textarea><br>
+        <button>Send</button>
+        <button onclick="toggleChat()">Close Chat</button>
+    </div>
+</body>
+</html>
+
+    <!-- Aur bhi links yahan add kar sakte hain -->
+</body>
+</html>
+
+        
+          
+</head>
+<body>
+    
+</body>
+   
+
+
+        
+    </section>
+    
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2024 Margdarshan Public School. All rights reserved.</p>
+        <p><a href="#privacy">Privacy Policy</a></p>
+     
+      
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
+
+        
+        
+    </footer>
+    
+    </head>
+    <body>
+    
+   
+            </div>
+        </div>
+    
+    </body>
+    </html>
+    
+</body>
+</html>
+
+
